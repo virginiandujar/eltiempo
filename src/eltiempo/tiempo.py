@@ -2,7 +2,7 @@
 import requests
 import json
 
-#Función para pedir los datos del usuario
+#Función para pedir los datos de¡l usuario
 #Bucle para asegurar poner el nombre del municipio en el formato correcto
 #Primera letra mayúscula y resto minúscula
 
