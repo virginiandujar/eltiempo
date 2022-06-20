@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests
 import json
 
@@ -39,7 +40,7 @@ def printResult(data,value):
 	print(f"Temperatura {data} : {value}")
 
 
-def main():
+def wheather():
 
 	#Obtenemos los datos de los  municipios para obtener el código provincia
 	data1= getData("https://www.el-tiempo.net/api/json/v2/municipios")
@@ -60,4 +61,6 @@ def main():
 			print("Este municipio no se puede encontrar")
 
 
-main()
+
+if __name__ == "__main__":
+	wheather()
