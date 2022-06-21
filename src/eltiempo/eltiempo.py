@@ -2,11 +2,11 @@
 import requests
 import json
 
-#Función para pedir los datos de¡l usuario
+#Función para pedir los datos del usuario
 #Bucle para asegurar poner el nombre del municipio en el formato correcto
 #Primera letra mayúscula y resto minúscula
 
-def giveData():
+def readData():
 	cap_municipio=None
 	
 	print("Introduce el municipio en el que vives: ")
@@ -48,7 +48,7 @@ def wheather():
 	#Excepción por si el dato introducido no es correcto o no se encuentra el municipio
 	#Todo en bucle hasta que el resultado para mostrar en pantalla sea correcto
 	while True: 
-		municipio=giveData()
+		municipio=readData()
 		codprov=findData(data1,"NOMBRE",municipio,"CODPROV")
 		try:
 			temperatures=getData("https://www.el-tiempo.net/api/json/v2/provincias/"+codprov)
