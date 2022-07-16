@@ -37,7 +37,7 @@ def findData(response,key1,value1,key2):
 
 #Funcion que muestra los resultados
 def printResult(data,value):
-	print(f"Temperatura {data} : {value}")
+	return f"Temperatura {data} : {value}"
 
 
 def wheather():
@@ -53,8 +53,8 @@ def wheather():
 		try:
 			temperatures=getData("https://www.el-tiempo.net/api/json/v2/provincias/"+codprov)
 			maxmin=findData(temperatures["ciudades"],"name",municipio,"temperatures")
-			printResult("Temperatura máxima: ",maxmin["max"])
-			printResult("Temperatura mínima: ",maxmin["min"])
+			print(printResult("Temperatura máxima: ",maxmin["max"]))
+			print(printResult("Temperatura mínima: ",maxmin["min"]))
 			break
 		
 		except:

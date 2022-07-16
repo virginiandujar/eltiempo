@@ -1,12 +1,11 @@
 import unittest
-import eltiempo
 
+from src.eltiempo import eltiempo
 
 
 class MyTestCase(unittest.TestCase):
     def test_printResult(self):
-        self.assertEqual(eltiempo.printResult("máximo","25"),
-                         "Temperatura máximo : 25")
+        self.assertEqual(eltiempo.printResult("máximo","25"),"Temperatura máximo : 25")
 
 
 if __name__ == '__main__':
